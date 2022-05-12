@@ -2,13 +2,13 @@ body, html {
   height: 100%;
 }
 body {
-  background-color: #eee;
+  background-color: #d9ebff;
   font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20px;
   font-weight: lighter;
 }
 
-.container {
+.WeatherApp {
   display: flex;
   flex-direction: column;
 }
@@ -62,8 +62,15 @@ body {
 }
 
 #results {
-  display: none;
   margin-bottom: 1em;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 p {
