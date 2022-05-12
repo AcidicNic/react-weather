@@ -20,24 +20,12 @@ function WeatherApp() {
     setLocation('san francisco');
   }
 
-  // update the weather info every 5 minutes
   useEffect(() => {
     weatherApi.getWeatherByCity(location)
     .then( (weatherObj) => {
       setWeather(weatherObj);
     })
     .catch( (err) => console.log(err) );
-  }, [location, weatherApi]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      weatherApi.getWeatherByCity(location)
-      .then( (weatherObj) => {
-        setWeather(weatherObj);
-      })
-      .catch( (err) => console.log(err) );
-    }, 5 * 60000);
-    return () => clearInterval(interval);
   }, [location, weatherApi]);
 
   return (
